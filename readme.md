@@ -22,7 +22,7 @@ El desarrollo del este prueba se realizo utilizando el sistema operativo Linux. 
 		'password' => '123456',
 		'database' => 'luisana_lizarazo',
 	```
-3.  Descarga luisana_lizarazo.sql e importarlo a la base de datos Mysql.
+3.  Descarga luisana_lizarazo.sql e importarlo a la base de datos Mysql. *nota: .sql fue enviado por correo y se encuentra en este repositorio*
 
 *******************
 #### Rutas

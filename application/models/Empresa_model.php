@@ -46,6 +46,7 @@ class Empresa_model extends CI_Model {
     function actualiza_empresa($nombre_empresa, $id_empresa) {
       $this->db->set('nombre',$nombre_empresa)
       ->where('id_empresa',$id_empresa)->update('Empresa');
+      return $this->db->insert_id(); 
     }
 
     /** 
@@ -54,10 +55,8 @@ class Empresa_model extends CI_Model {
     */
     function elimina_empresa($id_empresa) {
       $this->db->where('id_empresa',$id_empresa)->delete('Empresa');
+      return $this->db->insert_id();
     }
-
-
-
 }
 
 

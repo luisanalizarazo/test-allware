@@ -35,7 +35,6 @@ class Empleado_model extends CI_Model {
       * @author: Luisana Lizarazo 
     */
     function ingresa_empleado($datos) {
-
         $this->db->insert('Empleado',$datos);
         return $this->db->insert_id(); 
     }
@@ -50,6 +49,7 @@ class Empleado_model extends CI_Model {
             ->set('correo',$dato['correo'])
             ->set('fecha_nacimiento',$dato['fecha_nacimiento'])
             ->where('id_empleado',$dato['id_empleado'])->update('Empleado');
+            return $this->db->insert_id();
     }
 
     /** 
@@ -58,6 +58,7 @@ class Empleado_model extends CI_Model {
     */
     function elimina_empleado($id_empleado) {
         $this->db->where('id_empleado',$id_empleado)->delete('Empleado');
+        return $this->db->insert_id();
     }
 }
 
